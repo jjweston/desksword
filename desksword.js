@@ -32,4 +32,28 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 */
 
-console.log( "Hello World" );
+var fs = require( "fs" );
+
+fs.mkdir( "logs", logsDirectoryCreated );
+
+function logsDirectoryCreated( error )
+{
+    if ( error )
+    {
+        if ( error.code !== "EEXIST" )
+        {
+            throw error;
+        }
+    }
+
+    console.log( "Created logs directory." );
+    fs.appendFile( "logs/test.log", "This is a test.\n", appendCallback )
+}
+
+function appendCallback( error )
+{
+    if ( error )
+    {
+        throw error;
+    }
+}
