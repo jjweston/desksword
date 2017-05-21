@@ -32,41 +32,17 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 */
 
-var fs  = require( "fs"     );
-var tmi = require( "tmi.js" );
+/*
 
-var Config = require( "./Config.js" );
+Use this template to create a file called "Config.coffee" with appropriate values filled in.
 
-fs.mkdir( "logs", logsDirectoryCreated );
+Use this URL to generate a Twitch auth token: http://twitchapps.com/tmi/
 
-function logsDirectoryCreated( error )
+*/
+
+module.exports =
 {
-    if ( error )
-    {
-        if ( error.code !== "EEXIST" )
-        {
-            throw error;
-        }
-    }
-
-    console.log( "Created logs directory." );
-    fs.appendFile( "logs/test.log", "This is a test.\n", appendCallback )
-
-    var options =
-    {
-       options: { debug: true },
-       identity: { username: Config.twitchUser, password: Config.twitchAuth },
-       channels: Config.twitchChannels
-    };
-
-    var twitchClient = new tmi.client( options );
-    twitchClient.connect();
-}
-
-function appendCallback( error )
-{
-    if ( error )
-    {
-        throw error;
-    }
-}
+    twitchUser     : "insert-twitch-username-here",
+    twitchAuth     : "insert-twitch-auth-token-here",
+    twitchChannels : [ "#insert", "#twitch", "#channels", "#here" ]
+};

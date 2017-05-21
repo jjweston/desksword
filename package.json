@@ -1,0 +1,9 @@
+{
+   "name" : "desksword",
+   "version" : "1.0.0-SNAPSHOT",
+   "dependencies" :
+   {
+      "tmi.js" : ""
+   },
+   "private" : true
+}
