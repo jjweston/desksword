@@ -34,7 +34,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 /*
 
-Use this template to create a file called "Config.coffee" with appropriate values filled in.
+Use this template to create a file called "Config.js" with appropriate values filled in.
 
 Use this URL to generate a Twitch auth token: http://twitchapps.com/tmi/
 
